@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="google-site-verification" content="googlea39ba99adebeb9d3" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <title>Bloggcoin - Cripto Gratis</title>
+
+</head>
+<body>
+<style>
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-card: #141414;
+    --text-white: #ffffff;
+    --text-gray: #a0a0a0;
+    --accent: rgba(17,221,22,1.7);           /* #00ff88*/
+    --primary: #9d4edd;
+    --border: #222;
+	
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    scroll-behavior: smooth; /* Esto reemplaza el smooth scroll de JS */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Nav */
+header {
+    background: #000;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    /* Añadimos una transición para que el cambio de color sea suave */
+    transition: background-color 0.4s ease;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Un poco de padding interno ayuda al efecto */
+    transition: all 0.3s ease;
+    border-radius: 8px; /* Opcional: para que el efecto se vea contenido */
+}
+.header-flex:hover {
+    /* ... lo que ya pusimos ... */
+    border-bottom: 1px solid var(--accent);
+}
+
+/* EFECTO HOVER PARA EL HEADER-FLEX */
+.header-flex:hover {
+    background-color: rgba(157, 78, 223, 0.1); /* Un toque sutil del color 'primary' */
+    box-shadow: inset 0 0 10px rgba(0, 255, 136, 0.1); /* Opcional: brillo neón muy suave */
+}
+
+
+.main-nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--accent);              /* Corregido: antes decía --text-green (que no existe), ahora usa --accent  */
+ 
+}
+.logo {
+            font-family: arial;
+		    color: #000;		
+	        text-decoration: none;
+	        text-shadow: 1px 1px 1px rgba(17,221,22,1.7); 
+            font-size: 27px;
+            font-weight: bold;
+}
+
+/* ------------------------------------------------ */
+/* Hero */
+.hero { font-family: arial; padding: 40px 0; text-align: center; }
+.primary { font-size: 2.5rem; color: var(--primary); display: block; }
+.accent { font-size: 2.5rem; color: var(--accent);  font-weight: 800; }
+
+
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 990px; /* Ajusta este valor según qué tan anchas quieras las tarjetas */
+}
+
+/* IMPORTANTE: Mantén el Responsive para celulares */
+@media (max-width: 600px) {
+    .platforms-grid {
+        grid-template-columns: 1fr; /* En celulares sigue siendo 1 por fila para que se lea bien */
+        max-width: 100%;
+    }
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.card-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+
+.card-content h3 { color: var(--accent); margin-bottom: 10px; font-size: 1.5rem; }
+
+.description { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 15px; }
+
+/* Lista de beneficios */
+.benefits {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.benefits li {
+    font-size: 0.85rem;
+    color: #ccc;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.benefits li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover { background: #7b2cbf; }
+
+.disclaimer-box { text-align: center; }
+/* Responsive */
+@media (max-width: 800px) {
+    .platforms-grid { grid-template-columns: 1fr; } /* 1 columna en tablet/móvil */
+    .header-flex { flex-direction: column; gap: 15px; }
+    .main-nav { margin: 0; }
+}
+/*-----------------------------------------------------*/
+.social-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+</style>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">🎲 BloggCoin</div>
+            <nav class="main-nav">
+                <!--<a href="#hero">Inicio</a>
+                <a href="#platforms">Plataformas</a>
+                <a href="#disclaimer">Información</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>
+                <span class="primary">Criptomonedas</span><span class="accent">Gratis</span>
+                
+            </h1>
+            <p>Descubre las mejores plataformas de criptomonedas gratis, faucets, chat rain, dividendos y recompensas increíbles.</p>
+        </div>
+    </section>
+
+    <section id="platforms" class="platforms">
+        <div class="container">
+            <div class="platforms-grid">
+                
+                <article class="card">
+                    <img src="images/cplay.jpg" alt="Cryptoplay" class="card-img">
+                    <div class="card-content">
+                        <h3>Cryptoplay</h3>
+                        <p class="description">Casino crypto con bonos diarios y semanales, chat rain, rakebak, cashbak y concursos de apuestas mensuales con premios de hasta $5,000,000.</p>
+                        <ul class="benefits">
+                            <li>Bonos diarios y semanales</li>
+                            <li>Rakebak y Cashbak</li>
+                            <li>Premios de hasta $5,000,000</li>
+                            <li>Sistema Grow Pot</li>
+							<li>Airdrops Solana</li>
+                        </ul>
+                        <a href="https://cryptoplay.io/?c=Wm9HJXKOkzavA49tHeQ1" target="_blank" class="btn">Registrate Aquí</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="images/windi.png" alt="Windice" class="card-img">
+                    <div class="card-content">
+                        <h3>Windice</h3>
+                        <p class="description">Windice es una plataforma de juegos de azar con criptomonedas que destaca por sus juegos propios (provably fair) y una fuerte interacción social entre sus jugadores. A diferencia de otros sitios, ofrece muchas formas de conseguir saldo gratis y de recuperar lo apostado.</p>
+                        <ul class="benefits">
+                            <li>Chat Rain 24/7 los 365 dias del años</li>
+                            <li>Faucet  Wincoin</li>
+                            <li>Contest diario 100$ usdt gratis</li>
+                            <li>Trivias y Mucho concursos mas</li>
+                        </ul>
+                        <a href="https://windice.io/?r=fermin79" target="_blank" class="btn">Registrate Aquí</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="images/tom.png" alt="Wintomato" class="card-img">
+                    <div class="card-content">
+                        <h3>Wintomato</h3>
+                        <p class="description">Wintomato es una plataforma de casino de criptomonedas con un diseño minimalista, lo que le aporta gran fluidez. Con una dinámicas y  opciones para que los usuarios obtengan pequeñas fracciones de cripto gratis sin necesidad de depositar grandes sumas.</p>
+                        <ul class="benefits">
+                            <li>Faucet de mas de 20 Criptomonedas gratis</li>
+                            <li>Chat Rain</li>
+                            <li>Rakeback</li>
+                            <li>Mystery Boxes</li>
+                        </ul>
+                        <a href="https://wintomato.com/en/registration?refcode=1202640" target="_blank" class="btn">Registrate Aquí</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="images/trust.png" alt="Trustdice" class="card-img">
+                    <div class="card-content">
+                        <h3>Trustdice</h3>
+                        <p class="description">TrustDice es uno de los criptocasinos más populares y consolidados en el entorno de los juegos con cadena de bloques (blockchain), conocido especialmente por su enfoque en la comunidad y sus mecánicas para regalar criptomonedas.</p>
+                        <ul class="benefits">
+                            <li>Faucet de Crytomonedas gratuito</li>
+                            <li>Dividendos por minado de txt gratis</li>
+                            <li>Contest de txt y usdt diario</li>
+                            <li>Rakeback y Cashback</li>
+                        </ul>
+                        <a href="https://trustdice.win/faucet/?ref=u_gordon99" target="_blank" class="btn">Registrate Aquí</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="disclaimer" class="disclaimer">
+        <div class="container">
+            <div class="disclaimer-box">
+                <p>En resumen estas plataformas son buenas opciones para ganar nuestras primeras criptomonedas de forma gratuita.</p>
+			    <h4>Animo y Buena Suerte!!</h4>
+			
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="disclaimer-box">
+            <p>&copy; 2026    BloggCoin.com Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
